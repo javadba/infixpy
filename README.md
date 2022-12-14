@@ -23,13 +23,13 @@ val a = ((1 to 50)
 Version using the infixpy library with python
 
 ```python
-from infixpy import *
+from infixpy import * 
 a = (Seq(range(1,51))
      .map(lambda x: x * 4)
      .filter(lambda x: x <= 170)
      .filter(lambda x: len(str(x)) == 2)
      .filter( lambda x: x % 20 ==0)
-     .enumerate()                                            Ï
+     .enumerate()
      .map(lambda x: 'Result[%d]=%s' %(x[0],x[1]))
      .mkstring(' .. '))
 print(a)
@@ -45,16 +45,16 @@ from infixpy import Seq
 (Seq(range(10))
  .map(lambda x: x+3)
  .filter(lambda x: x%2==0)
- .group_by(lambda x: x%3)
- .items()
- .for_each(print))
+ .groupby(lambda x: x%3)
+ .keys()
+ .foreach(print))
 ```
 
 #### Output
-```Î
-(1, SList([4, 10]))
-(0, SList([6, 12]))
-(2, SList([8]))
+```
+1
+0
+2
 ```
 
 ## Examples

@@ -93,7 +93,7 @@ class IterableMixin(StrMixin):
         return IDict(self)
 
     def map(self, func_like: CallableTypes) -> 'Seq':
-        return Seq(map(get_callable(func_like), self))
+        return Seq(list(map(get_callable(func_like), self)))
 
     def flatmap(self, func_like: CallableTypes) -> 'Seq':
         func = get_callable(func_like)

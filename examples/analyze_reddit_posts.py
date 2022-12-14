@@ -8,7 +8,7 @@ https://towardsdatascience.com/interactively-exploring-reddit-posts-using-basic-
 import urllib.request
 from collections import namedtuple
 
-from scalaps import Seq
+from infixpy import Seq
 
 with urllib.request.urlopen('https://matthagy.com/RS_2018-01-sample.csv') as response:
     text = response.read().decode()
